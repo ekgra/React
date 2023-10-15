@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    /* height: 400px; */
+    display: flex;
+    /* flex-direction: row; */  /* this is default */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+
+    background-color: beige;
+
+    /* MAIN axis - Defualt: Horizontal -- changes when you change the flex-direction to column*/
+    /* justify-content: end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    
+    /* CROSS axis - Defualt: Vertical -- changes when you change the flex-direction to column */
+    /* align-items: end; */
+    align-items: center;
+
+    /* wraps the flex items onto next line if not sufficient pixels available on the current. */
+    /* if wrap is not used, it squishes them on the single line */
+    /* flex-wrap: wrap; */
+    
+}
+
+.item {
+    /* width: 100px; */
+    /* flex-basis: 100px;
+    flex-grow: 1; */
+
+    /* flex: flex-grow flex-shrink flex-basis */
+    flex: 1 0 100px;
+    height: 100px;
+    background: lightcoral;
+    margin: 10px;
+
+    /* align text within the items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-of-type(1){
+    /* align-self: start; */
+    /* order: 2; */
+    /* flex-grow: 1; */
+}
+
+.item:nth-of-type(2){
+    /* align-self: center; */
+    /* order: 3; */
+    /* flex-grow: 2; */
+}
+
+.item:nth-of-type(3){
+    /* align-self: end; */
+    /* order: 1; */
+    /* flex-basis: 200px; */
+    /* flex-grow: 1; */
+    /* flex-basis: 500px;
+    flex-shrink: 3 */
+}
